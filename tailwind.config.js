@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         boska: ["Boska", "sans-serif"],
+        sans: ["Montserrat"],
       },
     },
   },

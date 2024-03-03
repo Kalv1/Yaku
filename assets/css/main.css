@@ -1,6 +1,13 @@
 @font-face {
   font-family: "Boska";
   src: url("../fonts/Boska-Black.woff2") format("woff2");
-  font-weight: regular;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
