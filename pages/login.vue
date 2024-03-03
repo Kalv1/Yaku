@@ -12,7 +12,7 @@ definePageMeta({
       <client-only>
         <img
           class="h-full w-full opacity-50 object-cover"
-          :src="`/${randomBackground()}.jpg`"
+          :src="`/${randomBackground()}`"
           alt="plants"
         />
         <div
@@ -21,7 +21,7 @@ definePageMeta({
           <div
             class="text-white w-full text-balance tracking-wider flex items-center gap-4 font-boska"
           >
-            <a href="http://google.com/">Enterprise</a>
+            <a href="http://google.com/">Entreprise</a>
             <div class="w-full h-[1px] bg-white" />
           </div>
 
@@ -54,17 +54,18 @@ definePageMeta({
           <label class="block text-xs font" for="">Email</label>
           <input
             placeholder="Entrez votre email"
-            class="bg-[#F5F7FA] placeholder:text-xs px-3 py-2 w-full rounded-md"
+            class="bg-[#F5F7FA] placeholder:text-xs placeholder:tracking-wider px-3 py-2 w-full rounded-md"
             type="text"
           />
           <label class="block text-xs font mt-3" for="">Mot de passe</label>
           <input
             placeholder="Entrez votre mot de passe"
-            class="bg-[#F5F7FA] placeholder:text-xs px-3 py-2 w-full rounded-md"
+            class="bg-[#F5F7FA] placeholder:text-xs placeholder:tracking-wider px-3 py-2 w-full rounded-md"
             type="password"
           />
 
           <button
+            type="submit"
             class="w-full bg-black mt-5 py-2 text-white text-sm rounded-md"
           >
             Connexion
@@ -75,6 +76,7 @@ definePageMeta({
             <div class="h-[1px] w-full bg-[#F5F7FA]" />
           </div>
           <button
+            @click.prevent=""
             class="w-full border border-black mt-3 py-2 text-black text-sm rounded-md"
           >
             Inscription
