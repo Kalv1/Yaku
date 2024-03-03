@@ -1,7 +1,21 @@
 <script setup lang="ts">
+import valideEmail from "~/utils/valide-email";
+
 definePageMeta({
   layout: "auth",
 });
+
+const formData: Ref<{ email: string; password: string }> = ref({
+  email: "",
+  password: "",
+});
+
+const validateForm = (): void => {
+  if (valideEmail(formData.value.email) && formData.value.password.length > 0) {
+    // TODO : send data to server
+    console.log("form is valid");
+  }
+};
 </script>
 
 <template>
@@ -50,17 +64,19 @@ definePageMeta({
             connecter.
           </p>
         </div>
-        <form action="">
+        <form @submit.prevent="validateForm">
           <label class="block text-xs font" for="">Email</label>
           <input
+            v-model="formData.email"
             placeholder="Entrez votre email"
-            class="bg-[#F5F7FA] placeholder:text-xs placeholder:tracking-wider px-3 py-2 w-full rounded-md"
+            class="bg-[#F5F7FA] placeholder:text-xs placeholder:tracking-wider text-xs px-3 py-2 w-full rounded-md"
             type="text"
           />
           <label class="block text-xs font mt-3" for="">Mot de passe</label>
           <input
+            v-model="formData.password"
             placeholder="Entrez votre mot de passe"
-            class="bg-[#F5F7FA] placeholder:text-xs placeholder:tracking-wider px-3 py-2 w-full rounded-md"
+            class="bg-[#F5F7FA] placeholder:text-xs placeholder:tracking-wider text-xs px-3 py-2 w-full rounded-md"
             type="password"
           />
 
