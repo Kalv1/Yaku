@@ -17,7 +17,7 @@ const navigation: NavItem[] = [
     url: "/calendar",
     icon: PhCalendar,
     title: "Calendrier",
-    color: "bg-[#D8C7ED]",
+    color: "bg-[#E1DBCB]",
   },
   {
     url: "/defis",

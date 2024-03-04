@@ -14,7 +14,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="h-full bg-white p-4 2xl:p-6 flex flex-col items-center">
+  <div class="h-full bg-white p-4 2xl:p-6 flex flex-col items-center shadow-sm">
     <div class="w-fit font-bold font-boska text-2xl text-[#747474]">
       <p>約</p>
     </div>
