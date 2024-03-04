@@ -23,8 +23,8 @@ defineProps({
         v-for="navItem in navigation"
         class="p-3 rounded-md"
         :class="[
-          isSelected(navItem.url) && `outline outline-[#747474] outline-1`,
-          `bg-[${navItem.color}]`,
+          isSelected(navItem.url) && `outline outline-[#747474]/45 outline-1`,
+          navItem.color,
         ]"
         :to="navItem.url"
       >
