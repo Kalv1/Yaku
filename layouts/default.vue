@@ -11,19 +11,16 @@ const navigation: NavItem[] = [
     url: "/",
     icon: PhHouse,
     title: "Home",
-    color: "bg-[#BCE8D7]",
   },
   {
     url: "/calendar",
     icon: PhCalendar,
     title: "Calendrier",
-    color: "bg-[#E1DBCB]",
   },
   {
     url: "/defis",
     icon: PhLightbulbFilament,
-    title: "PhLightbulbFilament",
-    color: "bg-[#B4EDF9]",
+    title: "Défis",
   },
 ];
 </script>

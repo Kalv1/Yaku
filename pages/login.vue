@@ -19,9 +19,9 @@ const validateForm = (): void => {
 </script>
 
 <template>
-  <div class="w-full h-full p-4 xl:flex gap-4">
+  <div class="w-full h-full p-4 flex gap-4">
     <div
-      class="xl:block hidden w-1/2 h-full rounded overflow-hidden bg-black relative drop-shadow-lg"
+      class="lg:block hidden w-1/2 h-full rounded overflow-hidden bg-black relative drop-shadow-lg"
     >
       <client-only>
         <img
@@ -50,7 +50,7 @@ const validateForm = (): void => {
       </client-only>
     </div>
     <div
-      class="xl:w-1/2 w-full h-full flex flex-col items-center justify-between p-4"
+      class="lg:w-1/2 w-full h-full flex flex-col items-center justify-between p-4"
     >
       <div class="p-4 w-fit font-bold font-boska text-3xl">
         <p>約</p>
