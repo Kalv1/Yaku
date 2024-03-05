@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { NavItem } from "~/type";
-import { PhPower, PhGearSix } from "@phosphor-icons/vue";
 
 const route = useRoute();
 
@@ -19,35 +18,31 @@ defineProps({
   >
     <p class="text-center font-bold font-boska text-2xl text-black">Yaku.</p>
     <div class="grow py-5 text-[#525B64]">
-      <div class="flex flex-col">
-        <p class="font-bold text-3xs tracking-wider mb-2">MAIN MENU</p>
-        <div class="flex flex-col gap-3">
+      <div
+        class="flex flex-col"
+        v-for="(category, index) in navigation"
+        :class="index > 0 && 'mt-6'"
+      >
+        <p class="font-bold text-3xs tracking-wider mb-2">
+          {{ category.category }}
+        </p>
+        <div class="flex flex-col gap-2">
           <NuxtLink
-            v-for="navItem in navigation"
-            class="rounded-md flex items-center gap-3"
-            :class="[isSelected(navItem.url) && ``]"
-            :to="navItem.url"
+            v-for="item in category.data"
+            class="rounded-md flex items-center gap-3 py-1 px-2"
+            :class="[
+              isSelected(item.url) &&
+                `bg-[#F8F9FB] outline outline-[#F0F0F0] outline-1`,
+            ]"
+            :to="item.url"
           >
             <component
-              :is="navItem.icon"
+              :is="item.icon"
               color="#525B64"
               weight="thin"
               size="12"
             />
-            <p class="text-[0.6rem]">{{ navItem.title }}</p>
-          </NuxtLink>
-        </div>
-        <p class="font-bold text-3xs tracking-wider mt-8 mb-2">
-          ACCOUNT CENTER
-        </p>
-        <div class="flex flex-col gap-3">
-          <NuxtLink
-            class="rounded-md flex items-center gap-3"
-            :class="[isSelected('/parameter') && ``]"
-            to="/parameter"
-          >
-            <PhGearSix color="#525B64" weight="thin" size="12" />
-            <p class="text-[0.6rem]">Paramètres</p>
+            <p class="text-[0.6rem]">{{ item.title }}</p>
           </NuxtLink>
         </div>
       </div>

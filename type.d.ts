@@ -1,5 +1,8 @@
 export type NavItem = {
-  url: string;
-  title?: string;
-  icon: any;
+  category: string;
+  data: {
+    url: string;
+    title?: string;
+    icon: any;
+  }[];
 };

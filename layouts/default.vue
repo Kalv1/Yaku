@@ -1,26 +1,42 @@
 <script setup lang="ts">
 import {
-  PhPower,
   PhHouse,
   PhCalendar,
   PhLightbulbFilament,
+  PhGearSix,
 } from "@phosphor-icons/vue";
 import type { NavItem } from "~/type";
+
 const navigation: NavItem[] = [
   {
-    url: "/",
-    icon: PhHouse,
-    title: "Home",
+    category: "MAIN MENU",
+    data: [
+      {
+        url: "/",
+        icon: PhHouse,
+        title: "Home",
+      },
+      {
+        url: "/calendar",
+        icon: PhCalendar,
+        title: "Calendrier",
+      },
+      {
+        url: "/defis",
+        icon: PhLightbulbFilament,
+        title: "Défis",
+      },
+    ],
   },
   {
-    url: "/calendar",
-    icon: PhCalendar,
-    title: "Calendrier",
-  },
-  {
-    url: "/defis",
-    icon: PhLightbulbFilament,
-    title: "Défis",
+    category: "ACCOUNT CENTER",
+    data: [
+      {
+        url: "/parameter",
+        icon: PhGearSix,
+        title: "Pamètres",
+      },
+    ],
   },
 ];
 </script>
