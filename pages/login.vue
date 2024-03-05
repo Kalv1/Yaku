@@ -27,7 +27,7 @@ const validateForm = (): void => {
         <img
           class="h-full w-full opacity-50 object-cover"
           :src="`/${randomBackground()}`"
-          alt="plants"
+          alt="background image"
         />
         <div
           class="p-4 left-0 h-full top-0 flex flex-col justify-between absolute max-w-[50%]"
